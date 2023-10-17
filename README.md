@@ -19,7 +19,7 @@ The regex I will be describing serves as a password validator and I will be expl
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Summary](#summary)
+- [In Conclusion](#in-conclusion)
 - [Author](#author)
 
 ## Regex Components
@@ -86,7 +86,7 @@ For example: the greedy h.+l matches 'hell' in 'hello' but the lazy h.+l matches
 This is not used in our regex, but can be extemely useful.
 
 
-### Summary
+### In Conclusion
 In summary, regular expressions (regex) allow developers to to validate code, match patterns, manipulate text, parse structured data, and much more without having to write tons of lines of code to do so.  Our password validation regex in particular makes authenticating logins much more strait forward than it would be otherwise.
 
 ## Author
