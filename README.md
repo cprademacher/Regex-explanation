@@ -53,22 +53,44 @@ In the context of a regular expression, a character class is a set of characters
 
 [@#$%^!&*] ensures we have at least one special character.
 
-
-
 ### Flags
 
+Regex flags change the default match behavior.  Below are the flag examples:
+
+g	- Performs a global match, finding all matches rather than just the first.
+
+i	- Makes matches case-insensitive. Matches both uppercase and lowercase.
+
+m -	Performs multiline matches. (Changes behavior of ^,$)
+
+s -	Allows . to match newline characters.
+
+u -	Enables Unicode support.
+
+y -	Matches are sticky, looking only at exact position in the text.
+
+Since our password validation regex is only making sure the password has at least one of each required type of character, and it is only 8-16 characters long, none of these flags are needed in our regex, and are thus not used.
+
 ### Grouping and Capturing
+Capturing groups are a way to treat multiple characters as a single unit. It is done with paranthases and in our example simply groups the uppercase, lowercase, numerical, and special character callings as their own callings.
 
 ### Bracket Expressions
+A bracket expression (an expression enclosed in square brackets, "[]" ) is an RE that shall match a specific set of single characters, and may match a specific set of multi-character collating elements, based on the non-empty set of list expressions contained in the bracket expression.
+
+In our case, we use bracket expression for all but our numerical callings.  [A-Z] to find at least one uppercase letter, [a-z] to find at least one lowercase letter, and [@#$%^!&*] to find at least one special character.  
 
 ### Greedy and Lazy Match
+"GREEDY" means match the longest possible string.
+"LAZY" means match the shortest possible string.
+For example: the greedy h.+l matches 'hell' in 'hello' but the lazy h.+l matches 'hel' in 'hello'
+
+This is not used in our regex, but can be extemely useful.
 
 ### Boundaries
 
-### Back-references
-
-### Look-ahead and Look-behind
+### Summary
+In summary, regular expressions (regex) allow developers to to validate code, match patterns, manipulate text, parse structured data, and much more without having to write tons of lines of code to do so.  Our password validation regex in particular makes authenticating logins much more strait forward than it would be otherwise.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is Cody Rademacher and I am a full stack developer looking for my first role as a software engineer.  You can visit my GitHub profile at: https://github.com/cprademacher
